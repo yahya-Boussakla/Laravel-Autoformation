@@ -14,3 +14,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/contact', [ContactController::class, 'create']);
+
+
+
+
+// Route::post('/contact', 'ContactController@store');
+Route::post('/contact', [ContactController::class, 'store']);
